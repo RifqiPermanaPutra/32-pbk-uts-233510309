@@ -67,5 +67,19 @@ const games = ref([
   { name: 'Baldur’s Gate 3', finished: false },
   { name: 'Marvel Spiderman 2', finished: true },
 ])
+const addGame = () => {
+  const name = newGame.value.trim()
+  console.log("Game", name,"Telah Ditambahkan")
+
+  if (name === '') return
+
+  const exists = games.value.some(game => game.name.toLowerCase() === name.toLowerCase())
+  if (!exists) {
+    games.value.push({ name, finished: false })
+    newGame.value = ''
+  } else {
+    alert('Game sudah ada di daftar!')
+  }
+}
 
 </script>
