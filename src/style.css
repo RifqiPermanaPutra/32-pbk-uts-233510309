@@ -115,3 +115,21 @@ body {
   color: #999;
   font-style: italic;
 }
+
+.game-list span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.game-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #666;
+}
+
