@@ -133,3 +133,24 @@ body {
   color: #666;
 }
 
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.stat-box {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px #303841;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-10px);
+}
+
