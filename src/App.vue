@@ -58,4 +58,14 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+
+const newGame = ref('')
+const showOnlyUnfinished = ref(false)
+
+const games = ref([
+  { name: 'Resident Evil 4 Remake', finished: true },
+  { name: 'Baldur’s Gate 3', finished: false },
+  { name: 'Marvel Spiderman 2', finished: true },
+])
+
 </script>
