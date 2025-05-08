@@ -184,3 +184,30 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
+
+
+.status-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 5px 2px;
+  margin-right: 8px;
+  transition: transform 0.1s;
+}
+.status-btn:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.game-name {
+  flex-grow: 1;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
