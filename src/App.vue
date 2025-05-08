@@ -14,7 +14,26 @@
       <button :class="{ active: !showOnlyUnfinished }" @click="showOnlyUnfinished = false">Telah Tamat</button>
       <button :class="{ active: showOnlyUnfinished }" @click="showOnlyUnfinished = true">Belum Tamat</button>
     </div>
+    <!-- List Game -->
+    <div class="list-area">
+      <template v-if="filteredGames.length">
+        <ul class="game-list">
+          <li
+            v-for="(game, index) in filteredGames"
+           :key="index"
+           :class="{ finished: game.finished }"
+            >
+              <button class="status-btn" @click="toggleFinished(index)">
+                {{ game.finished ? '✅ ' : '⏳' }}
+             </button>
+            <span>{{ game.name }}</span>
+            <button @click="removeGame(index)">🗑️</button>
+          </li>
+
+        </ul>
+      </template>
     </div>
+  </div>
   </div>
 </template>
 
