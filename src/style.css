@@ -13,3 +13,21 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  color: #eafaf1;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #00dd88;
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
