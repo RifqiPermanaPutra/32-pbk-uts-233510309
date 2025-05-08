@@ -154,3 +154,20 @@ body {
   transform: translateY(-10px);
 }
 
+/* Total Game */
+.stat-total {
+  background: linear-gradient(135deg, #0A5EB0, #0A3981);
+  color: white;
+}
+
+/* Selesai */
+.stat-done {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+/* Belum Selesai */
+.stat-pending {
+  background: linear-gradient(135deg, #FF2929, #AF1740);
+  color: white;
+}
