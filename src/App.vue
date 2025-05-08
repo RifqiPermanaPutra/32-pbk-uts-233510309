@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <header class="header">
-      <h1>Game yang telah Ditamatkan</h1>
+      <h1>Daftar Game yang telah Ditamatkan</h1>
       <div class="underline"></div>
     </header>
 <!-- Input Menambahkan  Game -->
@@ -82,4 +82,27 @@ const addGame = () => {
   }
 }
 
+
+const toggleFinished = (index) => {
+  games.value[index].finished = !games.value[index].finished
+}
+
+const removeGame = (index) => {
+  const removedGame = games.value[index] 
+  games.value.splice(index, 1)
+  console.log("Game telah dihapus:", removedGame.name)
+}
+
+
+const filteredGames = computed(() => {
+  return showOnlyUnfinished.value
+    ? games.value.filter((game) => !game.finished)
+    : games.value
+})
+
+const finishedCount = computed(() => games.value.filter(g => g.finished).length)
+const unfinishedCount = computed(() => games.value.filter(g => !g.finished).length)
 </script>
+
+
+
